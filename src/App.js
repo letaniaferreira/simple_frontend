@@ -2,12 +2,14 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './HelloWorld.js';
+import ListOfUsers from "./ListOfUsers";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <HelloWorld/>
+        <ListOfUsers/>
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>
