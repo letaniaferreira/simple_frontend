@@ -10,7 +10,6 @@ class ListOfUsers extends React.Component{
         fetch('http://127.0.0.1:5000/users')
             .then(res => res.json())
             .then((data) => {
-                console.log(Object.entries(data))
                 this.setState(
                     {users: data}
                 )
