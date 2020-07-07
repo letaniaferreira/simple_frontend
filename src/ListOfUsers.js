@@ -7,7 +7,7 @@ class ListOfUsers extends React.Component{
     }
 
     componentDidMount() {
-        fetch('http://127.0.0.1:5000/message')
+        fetch('http://127.0.0.1:5000/users')
             .then(res => res.json())
             .then((data) => {
                 console.log(Object.entries(data))
