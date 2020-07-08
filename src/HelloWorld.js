@@ -12,7 +12,7 @@ class HelloWorld extends React.Component {
             .then((data) => {
                 this.setState({ greeting: data['message']})
             })
-            .catch((console.log))
+            .catch(console.log)
     }
 
     render() {

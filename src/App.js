@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './HelloWorld.js';
 import ListOfUsers from "./ListOfUsers";
+import UserDetails from "./UserDetails";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <header className="App-header">
         <HelloWorld/>
         <ListOfUsers/>
+        <UserDetails/>
 
         <img src={logo} className="App-logo" alt="logo" />
         <p>
