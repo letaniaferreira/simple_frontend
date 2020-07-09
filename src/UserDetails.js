@@ -1,25 +1,28 @@
 import React from "react";
 
 class UserDetails extends React.Component{
-    // state = {
-    //     user: ''
-    // }
+    state = {
+        user: ''
+    }
 
-    let query = this.state.query;
+    // need to add a form
     componentDidMount() {
+        let query = this.state.query;
         fetch(`http://127.0.0.1:5000/username?username=${query}`)
             .then(res=>res.json())
             .then((data) => {
-                this.setState(
-                    {user: data}
-                )
+                if (!data.message) {
+                    this.setState(
+                        {user: data}
+                    )
+                }
             })
-            .catch(console.log)
+            .catch((err) => { console.log('ohnoes: ' + err) })
     }
 
 
     render() {
-        return <div>this.state.user</div>
+        return <div>{this.state.user ? this.state.user : 'User not found'}</div>
     }
 }
 
