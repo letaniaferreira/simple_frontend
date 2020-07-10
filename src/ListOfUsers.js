@@ -20,7 +20,7 @@ class ListOfUsers extends React.Component{
     render() {
         return(
             <div>
-                {Object.entries(this.state.users).map(([key, user]) => <UserRow user={user} key={key} myKey={key}></UserRow>)}
+                {Object.entries(this.state.users).map(([key, user]) => <UserRow user={user}></UserRow>)}
             </div>
         )
     }
